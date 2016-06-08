@@ -19,6 +19,7 @@ def main():
 
 @main.command()
 @click.option('--key', help='Redis key to be watched')
-def watch(key):
+def monitor(key):
     """Watching Redis for key."""
-    Redmon.watch(key)
+    redmon = Redmon()
+    redmon.monitor(key)
