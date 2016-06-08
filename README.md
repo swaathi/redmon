@@ -5,10 +5,14 @@ Monitor a Redis key
 Redmon requires a working Redis connection.
 
 To install Redmon from pip,
-`pip install redmon`
+```
+  pip install redmon
+```
 
 Or from source,
-`python setup.py install`
+```
+  python setup.py install
+```
 
 ## Setup
 Redmon connects to your Redis connection with the following environment variables.
@@ -20,7 +24,9 @@ If none are set, default values are used.
 ## Get Started
 To watch a Redis key, just simply
 
-`redmon watch --key=snapshot`
+```
+  redmon watch --key=snapshot
+```
 
 Key is the name of the Redis key you want to monitor.
 
