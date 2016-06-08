@@ -7,3 +7,4 @@ venv
 redmon.egg-info
 build
 dist
+cache

@@ -4,10 +4,11 @@ import redis
 # redis = redis.StrictRedis(host='localhost', port=6379, db=0)
 
 # Get Time Interval
-def get_time_interval():
-    interval = get_env_var("REDMON_TIME_INT", 1)
+def get_time_interval(time=None):
+    interval = time or get_env_var("REDMON_TIME_INT", 1.0)
+    interval = float(interval)
     if (interval < 0.05):
-        interval = 1
+        interval = 1.0
 
     return interval
 

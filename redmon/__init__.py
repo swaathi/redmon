@@ -3,15 +3,15 @@ import os
 import time
 
 # Modules in Redmon
-from conf import get_time_interval, get_redis
+import conf
 
 class Redmon():
-    def __init__(self):
-        self.redis = get_redis()
-        self.interval = get_time_interval()
+    def __init__(self, interval=None):
+        self.redis = conf.get_redis()
+        self.interval = conf.get_time_interval(interval)
 
     def monitor(self, key):
-        print "* Watching '{0}' (Press CTRL+C to quit)".format(key)
+        print "* Watching '{0}' every {1} seconds (Press CTRL+C to quit)".format(key, self.interval)
 
         try:
             while True:
