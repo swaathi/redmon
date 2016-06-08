@@ -39,8 +39,6 @@ an environment variable or by passing it as an argument.
 REDMON_TIME_INT=2 redmon monitor --key=sample
 ```
 
-Redmon now watches a key called `sample` every two seconds.
-
 ```
 redmon monitor --key=snapshot --interval=2
 ```
