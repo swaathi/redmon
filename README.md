@@ -25,7 +25,7 @@ If none are set, default values are used.
 To watch a Redis key, just simply
 
 ```
-  redmon watch --key=snapshot
+  redmon monitor --key=snapshot
 ```
 
 Key is the name of the Redis key you want to monitor.
