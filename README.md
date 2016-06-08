@@ -45,7 +45,7 @@ redmon monitor --key=snapshot --interval=2
 
 Redmon now watches a key called `sample` every two seconds.
 
-*Intervals passed as arguments take precedence.*
+**Intervals passed as arguments take precedence.**
 
 ```
 REDMON_TIME_INT=2 redmon monitor --key=snapshot --interval=3
