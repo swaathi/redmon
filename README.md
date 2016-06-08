@@ -64,7 +64,8 @@ Redmon uses `pytest` to write/run test cases. To run the test cases,
 ## Contributing
 1. [Fork](https://help.github.com/articles/fork-a-repo/) this repo
 2. [Clone] (https://help.github.com/articles/cloning-a-repository/) your newly forked repo
-3. Raise pull requests to [swaathi/redmon](https://github.com/swaathi/redmon)
+3. Write relevant test cases
+4. Raise pull requests to [swaathi/redmon](https://github.com/swaathi/redmon)
 
 ## Coming Up
 - Monitor multiple keys
