@@ -30,8 +30,10 @@ To watch a Redis key, just simply
 
 Redmon now watches a key called `sample` every second.
 
+### Setting Refresh Intervals
+
 Changing the refresh interval for your monitor is very simple. You can either set it with
-an environment variable or by passing it as an argument. Intervals passed as arguments take precedence.
+an environment variable or by passing it as an argument.
 
 ```
 REDMON_TIME_INT=2 redmon monitor --key=sample
@@ -44,6 +46,8 @@ redmon monitor --key=snapshot --interval=2
 ```
 
 Redmon now watches a key called `sample` every two seconds.
+
+*Intervals passed as arguments take precedence.*
 
 ```
 REDMON_TIME_INT=2 redmon monitor --key=snapshot --interval=3
