@@ -9,7 +9,6 @@ with open('LICENSE') as f:
 
 setup(
     name='redmon',
-    packages = ['redmon'],
     version='0.1.0',
     description='Monitor a Redis key',
     long_description=readme,
@@ -18,6 +17,7 @@ setup(
     url = 'https://github.com/swaathi/redmon',
     download_url = 'https://github.com/swaathi/redmon/tarball/0.1.0',
     license=license,
+    packages=find_packages(exclude=('tests', 'docs')),
     entry_points={
         'console_scripts': [
             'redmon = redmon.cli:main',
