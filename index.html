@@ -65,7 +65,11 @@ If none are set, default values are used.</p>
 
 <p>To watch a Redis key, just simply</p>
 
-<pre><code>  redmon monitor --key=sample
+<pre><code>  redmon monitor -k sample
+  &gt;&gt; * Watching 'sample' every 1.0 seconds (Press CTRL+C to quit)
+  &gt;&gt; 18:30:08 - 5
+  &gt;&gt; 18:30:09 - 5
+  &gt;&gt; 18:30:10 - 5
 </code></pre>
 
 <p>Redmon now watches a key called <code>sample</code> every second.</p>
@@ -73,23 +77,35 @@ If none are set, default values are used.</p>
 <h3>
 <a id="setting-refresh-intervals" class="anchor" href="#setting-refresh-intervals" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Setting Refresh Intervals</h3>
 
-<p>Changing the refresh interval for your monitor is very simple. You can either set it with
-an environment variable or by passing it as an argument.</p>
+<p>Changing the refresh interval for your monitor is very simple. You can either set
+it with an environment variable or by passing it as an argument.</p>
 
-<pre><code>REDMON_TIME_INT=2 redmon monitor --key=sample
+<pre><code>REDMON_TIME_INT=2 redmon monitor -k sample
 </code></pre>
 
-<pre><code>redmon monitor --key=sample --interval=2
+<pre><code>redmon monitor -k sample -i 2
 </code></pre>
 
 <p>Redmon now watches a key called <code>sample</code> every two seconds.</p>
 
 <p><strong>Intervals passed as arguments take precedence.</strong></p>
 
-<pre><code>REDMON_TIME_INT=2 redmon monitor --key=sample --interval=3
+<pre><code>REDMON_TIME_INT=2 redmon monitor -k sample -i 3
 </code></pre>
 
 <p>Redmon now watches a key called <code>sample</code> every three seconds.</p>
+
+<h3>
+<a id="setting-expected-value" class="anchor" href="#setting-expected-value" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Setting expected value</h3>
+
+<p>You can set an expected value for your monitor, and Redmon will warn you when your
+key is not set to it.</p>
+
+<pre><code>redmon monitor -k sample -t 6
+</code></pre>
+
+<p>Now, Redmon will watch <code>sample</code> and expect its value to be 6. If it is not, Redmon will
+print its value in red.</p>
 
 <h2>
 <a id="running-tests" class="anchor" href="#running-tests" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Running Tests</h2>
@@ -119,7 +135,6 @@ an environment variable or by passing it as an argument.</p>
 <ul>
 <li>Monitor multiple keys</li>
 <li>Set the values your Redis key should be compared against</li>
-<li>Set the values your Redis key should never be</li>
 </ul>
       </section>
       <footer>
