@@ -10,13 +10,13 @@ with open('LICENSE') as f:
 setup(
     name='redmon',
     packages = ['redmon'],
-    version='0.1.1',
+    version='0.1.0',
     description='Monitor a Redis key',
     long_description=readme,
     author='Swaathi Kakarla',
     author_email='swaathi@skcript.com',
     url = 'https://github.com/swaathi/redmon',
-    download_url = 'https://github.com/swaathi/redmon/tarball/0.1',
+    download_url = 'https://github.com/swaathi/redmon/tarball/0.1.0',
     license=license,
     entry_points={
         'console_scripts': [
