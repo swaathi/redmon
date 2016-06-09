@@ -14,7 +14,8 @@ setup(
     long_description=readme,
     author=['Swaathi Kakarla'],
     author_email=['swaathi@skcript.com'],
-    url='http://www.skcript.com',
+    url = 'https://github.com/swaathi/redmon',
+    download_url = 'https://github.com/swaathi/redmon/tarball/0.1',
     license=license,
     packages=find_packages(exclude=('tests', 'docs')),
     entry_points={
