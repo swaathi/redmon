@@ -40,7 +40,7 @@ REDMON_TIME_INT=2 redmon monitor --key=sample
 ```
 
 ```
-redmon monitor --key=snapshot --interval=2
+redmon monitor --key=sample --interval=2
 ```
 
 Redmon now watches a key called `sample` every two seconds.
@@ -48,7 +48,7 @@ Redmon now watches a key called `sample` every two seconds.
 **Intervals passed as arguments take precedence.**
 
 ```
-REDMON_TIME_INT=2 redmon monitor --key=snapshot --interval=3
+REDMON_TIME_INT=2 redmon monitor --key=sample --interval=3
 ```
 
 Redmon now watches a key called `sample` every three seconds.
