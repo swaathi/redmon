@@ -1,0 +1,133 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Redmon by swaathi</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+    <meta name="viewport" content="width=device-width">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Redmon</h1>
+        <p>Monitor a Redis key</p>
+
+        <p class="view"><a href="https://github.com/swaathi/redmon">View the Project on GitHub <small>swaathi/redmon</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/swaathi/redmon/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/swaathi/redmon/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/swaathi/redmon">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a id="redmon" class="anchor" href="#redmon" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Redmon</h1>
+
+<p>Monitor a Redis key</p>
+
+<h2>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Installation</h2>
+
+<p>Redmon requires a working Redis connection.</p>
+
+<p>To install Redmon from pip,</p>
+
+<pre><code>  pip install redmon
+</code></pre>
+
+<p>Or from source,</p>
+
+<pre><code>  python setup.py install
+</code></pre>
+
+<h2>
+<a id="setup" class="anchor" href="#setup" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Setup</h2>
+
+<p>Redmon connects to your Redis connection with the following environment variables.
+If none are set, default values are used.</p>
+
+<ul>
+<li>REDMON_REDIS_HOST (default, <code>localhost</code>) : Set it to where your Redis is running from.</li>
+<li>REDMON_REDIS_PORT (default, <code>6379</code>)      : Set it to where your Redis is running on.</li>
+<li>REDMON_TIME_INT (default, <code>1.0</code>)           : Set refresh interval for your Redis key</li>
+</ul>
+
+<h2>
+<a id="get-started" class="anchor" href="#get-started" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Get Started</h2>
+
+<p>To watch a Redis key, just simply</p>
+
+<pre><code>  redmon monitor --key=sample
+</code></pre>
+
+<p>Redmon now watches a key called <code>sample</code> every second.</p>
+
+<h3>
+<a id="setting-refresh-intervals" class="anchor" href="#setting-refresh-intervals" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Setting Refresh Intervals</h3>
+
+<p>Changing the refresh interval for your monitor is very simple. You can either set it with
+an environment variable or by passing it as an argument.</p>
+
+<pre><code>REDMON_TIME_INT=2 redmon monitor --key=sample
+</code></pre>
+
+<pre><code>redmon monitor --key=sample --interval=2
+</code></pre>
+
+<p>Redmon now watches a key called <code>sample</code> every two seconds.</p>
+
+<p><strong>Intervals passed as arguments take precedence.</strong></p>
+
+<pre><code>REDMON_TIME_INT=2 redmon monitor --key=sample --interval=3
+</code></pre>
+
+<p>Redmon now watches a key called <code>sample</code> every three seconds.</p>
+
+<h2>
+<a id="running-tests" class="anchor" href="#running-tests" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Running Tests</h2>
+
+<p>Redmon uses <code>pytest</code> to write/run test cases. To run the test cases,</p>
+
+<pre><code>  cd tests
+  py.test
+</code></pre>
+
+<h2>
+<a id="contributing" class="anchor" href="#contributing" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Contributing</h2>
+
+<ol>
+<li>
+<a href="https://help.github.com/articles/fork-a-repo/">Fork</a> this repo</li>
+<li>
+<a href="https://help.github.com/articles/cloning-a-repository/">Clone</a> your newly forked repo</li>
+<li>Write relevant test cases</li>
+<li>Raise pull requests to <a href="https://github.com/swaathi/redmon">swaathi/redmon</a>
+</li>
+</ol>
+
+<h2>
+<a id="coming-up" class="anchor" href="#coming-up" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Coming Up</h2>
+
+<ul>
+<li>Monitor multiple keys</li>
+<li>Set the values your Redis key should be compared against</li>
+<li>Set the values your Redis key should never be</li>
+</ul>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/swaathi">swaathi</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
