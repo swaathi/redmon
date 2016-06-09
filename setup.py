@@ -9,7 +9,8 @@ with open('LICENSE') as f:
 
 setup(
     name='redmon',
-    version='0.0.1',
+    packages = ['redmon'],
+    version='0.1',
     description='Monitor a Redis key',
     long_description=readme,
     author=['Swaathi Kakarla'],
