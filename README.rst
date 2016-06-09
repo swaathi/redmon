@@ -37,7 +37,7 @@ To watch a Redis key, just simply
 
 ::
 
-      redmon monitor -k sample
+      >> redmon monitor -k sample
       >> * Watching 'sample' every 1.0 seconds (Press CTRL+C to quit)
       >> 18:30:08 - 5
       >> 18:30:09 - 5
