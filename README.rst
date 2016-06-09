@@ -37,7 +37,11 @@ To watch a Redis key, just simply
 
 ::
 
-      redmon monitor --key=sample
+      redmon monitor -k sample
+      >> * Watching 'sample' every 1.0 seconds (Press CTRL+C to quit)
+      >> 18:30:08 - 5
+      >> 18:30:09 - 5
+      >> 18:30:10 - 5
 
 Redmon now watches a key called ``sample`` every second.
 
@@ -50,11 +54,11 @@ argument.
 
 ::
 
-    REDMON_TIME_INT=2 redmon monitor --key=sample
+    REDMON_TIME_INT=2 redmon monitor -k sample
 
 ::
 
-    redmon monitor --key=sample --interval=2
+    redmon monitor -k sample -i 2
 
 Redmon now watches a key called ``sample`` every two seconds.
 
@@ -62,9 +66,22 @@ Redmon now watches a key called ``sample`` every two seconds.
 
 ::
 
-    REDMON_TIME_INT=2 redmon monitor --key=sample --interval=3
+    REDMON_TIME_INT=2 redmon monitor -k sample -i 3
 
 Redmon now watches a key called ``sample`` every three seconds.
+
+Setting expected value
+~~~~~~~~~~~~~~~~~~~~~~
+
+You can set an expected value for your monitor, and Redmon will warn you
+when your key is not set to it.
+
+::
+
+    redmon monitor -k sample -t 6
+
+Now, Redmon will watch ``sample`` and expect its value to be 6. If it is
+not, Redmon will print its value in red.
 
 Running Tests
 -------------
