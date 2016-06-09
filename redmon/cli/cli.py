@@ -18,9 +18,10 @@ def main():
     pass
 
 @main.command()
-@click.option('--key', help='Redis key to be watched')
-@click.option('--interval', default=None, help='Refrest interval in seconds')
-def monitor(key, interval=None):
+@click.option('--key', '-k', help='Redis key to be watched')
+@click.option('--trueval', '-t', default=None, help='Value that Redis key will be compared against')
+@click.option('--interval', '-i', default=None, help='Refresh interval in seconds')
+def monitor(key, trueval=None, interval=None):
     """Watching Redis for key."""
-    redmon = Redmon(interval)
-    redmon.monitor(key)
+    redmon = Redmon(key=key, trueval=trueval, interval=interval)
+    redmon.monitor()

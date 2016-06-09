@@ -23,6 +23,6 @@ setup(
         ],
     },
     install_requires=(
-    	['redis'], ['click'], ['pytest']
+    	['redis'], ['click'], ['pytest'], ['termcolor']
     )
 )
