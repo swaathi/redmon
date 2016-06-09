@@ -108,4 +108,3 @@ Coming Up
 
 -  Monitor multiple keys
 -  Set the values your Redis key should be compared against
--  Set the values your Redis key should never be
