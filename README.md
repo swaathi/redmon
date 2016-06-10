@@ -57,7 +57,7 @@ REDMON_TIME_INT=2 redmon monitor -k sample -i 3
 
 Redmon now watches a key called `sample` every three seconds.
 
-### Setting expected value
+### Setting Expected Value
 
 You can set an expected value for your monitor, and Redmon will warn you when your
 key is not set to it.
